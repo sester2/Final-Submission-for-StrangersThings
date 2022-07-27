@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { userSignUP } from "../api";
+import { userSignUP } from "../API";
 
 const Signup = ({setToken}) => {
   

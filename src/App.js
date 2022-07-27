@@ -2,9 +2,9 @@ import React from "react";
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import { fetchPosts } from "./api";
+import { fetchPosts } from "./API";
 import nav from "./COMPONENTS/nav";
-import posts from "./COMPONENTS/posts";
+import Posts from "./COMPONENTS/posts";
 // import Profile from "./components/Profile";
 // import login from "./components/login";
 import signin from "./COMPONENTS/signin";
@@ -40,7 +40,7 @@ function App() {
           <Route
             path="/"
             element={
-              <posts
+              <Posts
                 setoriginalposts={setoriginalposts}
                 originalposts={originalposts}
               />

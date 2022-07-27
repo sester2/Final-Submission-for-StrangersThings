@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { createMessage } from "../API";
+
 // import {profile} from "./profile";
 
 const NewMsg = () => {
@@ -14,14 +16,17 @@ const NewMsg = () => {
     };
     makeMsg();
   });
-// When the click event is fired this should send a response to the API with 
-// The handleSubmit is triggered by the submit button 
-const handleSubmit = async (event) => {
-  event.preventDefault();
-  createPost(title, description, price, willDeliver, location);
-}  
-const handleChange = (event) => {
-    setnewMsg(event.taget.value);
+  // When the click event is fired this should send a response to the API with
+
+  // The handleSubmit is triggered by the submit button
+
+  const handleChange = (event) => {
+    this.setNewMsg(event.taget.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    createMessage();
   };
 
   return (
@@ -33,13 +38,19 @@ const handleChange = (event) => {
           value={newMsg}
           placeholder="text"
           onChange={(e) => {
-            setNewMsg(e.target.value);
+            this.setNewMsg(e.target.value);
+            handleChange();
           }}
         ></input>
-
-        <input type="submit" value="Submit">
+        <button
+          id="my-submit-button"
+          onClick={(e) => {
+            console.log("Button click");
+            handleSubmit();
+          }}
+        >
           Submit
-        </input>
+        </button>
       </form>
     </div>
   );
