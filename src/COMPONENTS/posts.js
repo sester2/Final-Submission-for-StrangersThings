@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchPosts } from "../API";
-import NewPost from "./newposts.js";
+// import NewPost from "./newposts.js";
 
 const Posts = (props) => {
   // const [originalposts, setoriginalposts] = useState([" "]);
@@ -17,10 +17,10 @@ const Posts = (props) => {
   }, []);
 
   // setoriginalposts would be invoked with [... originalposts, newPosts]
-
+  // Wouldn't it make sense that the NewPost contain all the new posts? 
   return (
     <div>
-      <NewPost
+      <Posts
         setoriginalposts={setoriginalposts}
         originalposts={originalposts}
       />
@@ -42,5 +42,5 @@ const Posts = (props) => {
     </div>
   );
 };
-
+// Somewhere we could have the newPosts appear at the bottom of the page
 export default Posts;
