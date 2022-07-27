@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { Route } from "router";
+// import { Route } from "router";
 import { createPost } from "../api";
-import {Profile} from "./Profile";
+// import {profile} from "./profile";
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState("");
-  // const [title, setTitle] = useState("");
+  const [title, setTitle] = useState("");
   // const [description, setDescription] = useState("");
   // const [willDeliver, setwillDeliver] = useState(false);
   // const [price, setPrice] = useState("");

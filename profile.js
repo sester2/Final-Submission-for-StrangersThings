@@ -1,13 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { fetchUserPosts } from "../api";
-import {NewPost}from "./NewPost";
+import { newposts } from "./newposts";
 
 //I would like user to have access to see all the posts they have made 
 
 const Profile = () => {
   const [posts, setPosts] = useState([]);
-
+      
   useEffect(() => {
     const getPosts = async () => {
       const newToken = localStorage.getItem("token");
