@@ -9,7 +9,6 @@ import Posts from "./COMPONENTS/posts";
 // import login from "./components/login";
 import signin from "./COMPONENTS/signin";
 
-
 function App() {
   const [token, setToken] = useState(null);
 
@@ -35,7 +34,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <nav/>
+        <nav />
         <Routes>
           <Route
             path="/"
@@ -49,7 +48,7 @@ function App() {
           <Route
             path="/posts"
             element={
-              <posts
+              <Posts
                 setoriginalposts={setoriginalposts}
                 originalposts={originalposts}
               />

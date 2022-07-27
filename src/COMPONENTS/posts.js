@@ -17,7 +17,7 @@ const Posts = (props) => {
   }, []);
 
   // setoriginalposts would be invoked with [... originalposts, newPosts]
-  // Wouldn't it make sense that the NewPost contain all the new posts? 
+  // Wouldn't it make sense that the NewPost contain all the new posts?
   return (
     <div>
       <Posts
