@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { Route } from "router";
+// import { Route } from "router";
 import { createPost } from "../api";
-import {Profile} from "./Profile";
+// import {profile} from "./profile";
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState("");

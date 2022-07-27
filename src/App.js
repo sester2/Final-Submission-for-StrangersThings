@@ -1,12 +1,14 @@
 import React from "react";
 import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom";
-import Nav from "./components/Nav";
 import { useState, useEffect } from "react";
-import Posts from "./components/Posts";
+
+import { fetchPosts } from "./api";
+import nav from "./COMPONENTS/nav";
+import posts from "./COMPONENTS/posts";
 // import Profile from "./components/Profile";
 // import login from "./components/login";
-import Signup from "./components/Signup";
-import { fetchPosts } from "./api";
+import signin from "./COMPONENTS/signin";
+
 
 function App() {
   const [token, setToken] = useState(null);
@@ -33,28 +35,28 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Nav />
+        <nav/>
         <Routes>
           <Route
             path="/"
             element={
-              <Posts
+              <posts
                 setoriginalposts={setoriginalposts}
                 originalposts={originalposts}
               />
             }
           />
           <Route
-            path="/Posts"
+            path="/posts"
             element={
-              <Posts
+              <posts
                 setoriginalposts={setoriginalposts}
                 originalposts={originalposts}
               />
             }
           />
 
-          <Route path="/Signup" element={<Signup />} />
+          <Route path="/signin" element={<signin />} />
         </Routes>
       </BrowserRouter>
     </div>

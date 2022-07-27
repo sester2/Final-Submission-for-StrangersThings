@@ -8,16 +8,16 @@ const Nav = () => {
         Stranger Things
         {localStorage.getItem("token") ? <> Logged in</> : <> Not Logged in</>}
       </div>
-      <Link className="links" to="/Posts">
+      <Link className="links" to="/posts">
         AllPosts
       </Link>
-      <Link className="links" to="/Profile">
+      <Link className="links" to="/profile">
         Profile
       </Link>
-      <Link className="links" to="/Login">
+      <Link className="links" to="/login">
         Login
       </Link>
-      <Link className="links" to="/Signup">
+      <Link className="links" to="/signin">
         Signup
       </Link>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import {Profile} from "./Profile";
+// import {profile} from "./profile";
 
 const NewMsg = () => {
   const [newMsg, setNewMsg] = useState("");
